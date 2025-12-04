@@ -84,8 +84,8 @@ const AllCommands = () => {
                 {/* Results Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredCommands.map((cmd) => (
-                        <div key={cmd.name} className="group perspective-1000 h-56 cursor-pointer">
-                            <div className="relative w-full h-full transition-all duration-500 transform-style-3d group-hover:rotate-y-180">
+                        <div key={cmd.name} className="group perspective-1000 h-56 cursor-pointer focus:outline-none" tabIndex={0}>
+                            <div className="relative w-full h-full transition-all duration-500 transform-style-3d group-hover:rotate-y-180 group-focus-within:rotate-y-180">
 
                                 {/* Front Face */}
                                 <div className="absolute w-full h-full backface-hidden bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-center text-center">
