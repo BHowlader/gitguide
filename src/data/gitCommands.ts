@@ -291,6 +291,26 @@ export const gitCommands: GitCommand[] = [
         usage: 'git fast-import'
     },
 
+    // Hosting & Deployment
+    {
+        name: 'git subtree push',
+        description: 'Deploy a subfolder (like dist) to a branch (like gh-pages)',
+        category: 'Hosting & Deployment',
+        usage: 'git subtree push --prefix dist origin gh-pages'
+    },
+    {
+        name: 'git push origin :gh-pages',
+        description: 'Deploy a branch directly to GitHub Pages',
+        category: 'Hosting & Deployment',
+        usage: 'git push origin main:gh-pages'
+    },
+    {
+        name: 'git push heroku',
+        description: 'Deploy the current branch to Heroku',
+        category: 'Hosting & Deployment',
+        usage: 'git push heroku main'
+    },
+
     // Administration
     {
         name: 'git clean',

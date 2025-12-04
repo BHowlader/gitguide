@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Search, Terminal, Settings, FolderPlus, Save, GitBranch, Share2, Eye, FileDiff, Bug, Mail, Server, Shield, Wrench } from 'lucide-react';
+import { Search, Terminal, Settings, FolderPlus, Save, GitBranch, Share2, Eye, FileDiff, Bug, Mail, Server, Shield, Wrench, Cloud } from 'lucide-react';
 import { gitCommands } from '../data/gitCommands';
 
 const AllCommands = () => {
@@ -32,6 +32,7 @@ const AllCommands = () => {
             case 'Debugging': return <Bug className="h-5 w-5" />;
             case 'Email': return <Mail className="h-5 w-5" />;
             case 'External Systems': return <Server className="h-5 w-5" />;
+            case 'Hosting & Deployment': return <Cloud className="h-5 w-5" />;
             case 'Administration': return <Shield className="h-5 w-5" />;
             case 'Plumbing': return <Wrench className="h-5 w-5" />;
             default: return <Terminal className="h-5 w-5" />;
