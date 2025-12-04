@@ -12,19 +12,19 @@ const Hero = () => {
             </div>
 
             <div className="max-w-7xl mx-auto text-center">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-sm font-medium mb-8 animate-fade-in-up">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-900/30 text-indigo-400 text-sm font-medium mb-8 animate-fade-in-up">
                     <GitBranch className="h-4 w-4" />
                     <span>Master Git & GitHub Today</span>
                 </div>
 
-                <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">
+                <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
                     Version Control <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">
                         Made Simple
                     </span>
                 </h1>
 
-                <p className="text-xl text-slate-600 dark:text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                     The complete guide to mastering Git and GitHub. From your first commit to advanced branching strategies, we've got you covered.
                 </p>
 
@@ -38,7 +38,7 @@ const Hero = () => {
                     </Link>
                     <Link
                         to="/cheatsheet"
-                        className="px-8 py-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 hover:border-indigo-500 dark:hover:border-indigo-500 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center gap-2"
+                        className="px-8 py-4 bg-slate-800 text-slate-200 border border-slate-700 hover:border-indigo-500 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center gap-2"
                     >
                         <Terminal className="h-5 w-5" />
                         Cheat Sheet

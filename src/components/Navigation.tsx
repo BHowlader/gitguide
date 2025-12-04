@@ -1,13 +1,8 @@
 import React from 'react';
-import { Moon, Sun, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
-interface NavigationProps {
-    darkMode: boolean;
-    toggleTheme: () => void;
-}
-
-const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleTheme }) => {
+const Navigation: React.FC = () => {
     const [isOpen, setIsOpen] = React.useState(false);
     const location = useLocation();
 
@@ -44,17 +39,6 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleTheme }) => {
                                 {item.label}
                             </Link>
                         ))}
-                        <button
-                            onClick={toggleTheme}
-                            className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-                            aria-label="Toggle theme"
-                        >
-                            {darkMode ? (
-                                <Sun className="h-5 w-5 text-amber-400" />
-                            ) : (
-                                <Moon className="h-5 w-5 text-slate-600" />
-                            )}
-                        </button>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -86,25 +70,6 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleTheme }) => {
                                 {item.label}
                             </Link>
                         ))}
-                        <button
-                            onClick={() => {
-                                toggleTheme();
-                                setIsOpen(false);
-                            }}
-                            className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors flex items-center gap-2"
-                        >
-                            {darkMode ? (
-                                <>
-                                    <Sun className="h-5 w-5 text-amber-400" />
-                                    <span>Light Mode</span>
-                                </>
-                            ) : (
-                                <>
-                                    <Moon className="h-5 w-5 text-slate-600" />
-                                    <span>Dark Mode</span>
-                                </>
-                            )}
-                        </button>
                     </div>
                 </div>
             )}

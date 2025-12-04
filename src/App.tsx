@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy, Suspense } from 'react'
+import { useEffect, lazy, Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Navigation from './components/Navigation'
@@ -21,29 +21,16 @@ const PageLoader = () => (
 )
 
 function App() {
-  const [darkMode, setDarkMode] = useState(() => {
-    const saved = localStorage.getItem('darkMode')
-    return saved ? JSON.parse(saved) : false
-  })
-
+  // Set dark mode permanently
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-    localStorage.setItem('darkMode', JSON.stringify(darkMode))
-  }, [darkMode])
-
-  const toggleTheme = () => {
-    setDarkMode(!darkMode)
-  }
+    document.documentElement.classList.add('dark')
+  }, [])
 
   return (
     <Router>
-      <div className={darkMode ? 'dark' : ''}>
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-colors duration-300 flex flex-col">
-          <Navigation darkMode={darkMode} toggleTheme={toggleTheme} />
+      <div className="dark">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 transition-colors duration-300 flex flex-col">
+          <Navigation />
           <main className="flex-grow">
             <Suspense fallback={<PageLoader />}>
               <Routes>
