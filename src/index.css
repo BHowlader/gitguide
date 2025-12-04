@@ -4,3 +4,20 @@
 body {
     @apply bg-slate-900 text-slate-100;
 }
+
+/* 3D Flip Utilities */
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.transform-style-3d {
+    transform-style: preserve-3d;
+}
+
+.backface-hidden {
+    backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+    transform: rotateY(180deg);
+}
