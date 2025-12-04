@@ -188,31 +188,31 @@ export const gitCommands: GitCommand[] = [
     // Inspection and Comparison
     {
         name: 'git show',
-        description: 'Show various types of objects',
+        description: 'View details of a specific commit or object',
         category: 'Inspection and Comparison',
         usage: 'git show <commit>'
     },
     {
         name: 'git shortlog',
-        description: 'Summarize "git log" output',
+        description: 'Show a summarized list of commits',
         category: 'Inspection and Comparison',
         usage: 'git shortlog'
     },
     {
         name: 'git describe',
-        description: 'Give an object a human readable name based on an available ref',
+        description: 'Find the most recent tag reachable from a commit',
         category: 'Inspection and Comparison',
         usage: 'git describe'
     },
     {
         name: 'git whatchanged',
-        description: 'Show logs with difference each commit introduces',
+        description: 'Show logs along with the files changed in each commit',
         category: 'Inspection and Comparison',
         usage: 'git whatchanged'
     },
     {
         name: 'git verify-commit',
-        description: 'Check the GPG signature of commits',
+        description: 'Check if a commit is securely signed',
         category: 'Inspection and Comparison',
         usage: 'git verify-commit <commit>'
     },
@@ -220,25 +220,25 @@ export const gitCommands: GitCommand[] = [
     // Patching
     {
         name: 'git apply',
-        description: 'Apply a patch to files and/or to the index',
+        description: 'Apply a patch file to your code',
         category: 'Patching',
         usage: 'git apply <patch>'
     },
     {
         name: 'git cherry-pick',
-        description: 'Apply the changes introduced by some existing commits',
+        description: 'Copy a specific commit from another branch to here',
         category: 'Patching',
         usage: 'git cherry-pick <commit>'
     },
     {
         name: 'git rebase',
-        description: 'Reapply commits on top of another base tip',
+        description: 'Move your branch to start from a different commit',
         category: 'Patching',
         usage: 'git rebase main'
     },
     {
         name: 'git revert',
-        description: 'Revert some existing commits',
+        description: 'Create a new commit that undoes a previous commit',
         category: 'Patching',
         usage: 'git revert <commit>'
     },
@@ -246,19 +246,19 @@ export const gitCommands: GitCommand[] = [
     // Debugging
     {
         name: 'git bisect',
-        description: 'Use binary search to find the commit that introduced a bug',
+        description: 'Find the commit that caused a bug by binary search',
         category: 'Debugging',
         usage: 'git bisect start'
     },
     {
         name: 'git blame',
-        description: 'Show what revision and author last modified each line of a file',
+        description: 'Show who last modified each line of a file',
         category: 'Debugging',
         usage: 'git blame <file>'
     },
     {
         name: 'git grep',
-        description: 'Print lines matching a pattern',
+        description: 'Search for text inside any file in your history',
         category: 'Debugging',
         usage: 'git grep "pattern"'
     },
@@ -266,25 +266,25 @@ export const gitCommands: GitCommand[] = [
     // Email
     {
         name: 'git am',
-        description: 'Apply a series of patches from a mailbox',
+        description: 'Apply patches sent via email',
         category: 'Email',
         usage: 'git am < file.patch'
     },
     {
         name: 'git format-patch',
-        description: 'Prepare patches for e-mail submission',
+        description: 'Convert commits into email-ready patch files',
         category: 'Email',
         usage: 'git format-patch -1 HEAD'
     },
     {
         name: 'git send-email',
-        description: 'Send a collection of patches as emails',
+        description: 'Send your patches via email',
         category: 'Email',
         usage: 'git send-email *.patch'
     },
     {
         name: 'git request-pull',
-        description: 'Generates a summary of pending changes',
+        description: 'Generate a summary to ask someone to pull your changes',
         category: 'Email',
         usage: 'git request-pull v1.0 <url>'
     },
@@ -292,19 +292,19 @@ export const gitCommands: GitCommand[] = [
     // External Systems
     {
         name: 'git svn',
-        description: 'Bidirectional operation between a Subversion repository and Git',
+        description: 'Interact with Subversion (SVN) repositories',
         category: 'External Systems',
         usage: 'git svn clone <url>'
     },
     {
         name: 'git fast-import',
-        description: 'Backend for fast Git data importers',
+        description: 'Import large amounts of data into Git quickly',
         category: 'External Systems',
         usage: 'git fast-import'
     },
     {
         name: 'git lfs',
-        description: 'Manage large files with Git LFS',
+        description: 'Manage large files (like images/videos) with Git LFS',
         category: 'External Systems',
         usage: 'git lfs track "*.psd"'
     },
@@ -312,7 +312,7 @@ export const gitCommands: GitCommand[] = [
     // Hosting & Deployment
     {
         name: 'git subtree push',
-        description: 'Deploy a subfolder (like dist) to a branch (like gh-pages)',
+        description: 'Deploy a specific folder to a branch (e.g. GitHub Pages)',
         category: 'Hosting & Deployment',
         usage: 'git subtree push --prefix dist origin gh-pages'
     },
@@ -332,175 +332,175 @@ export const gitCommands: GitCommand[] = [
     // Administration
     {
         name: 'git clean',
-        description: 'Remove untracked files from the working tree',
+        description: 'Remove untracked/new files from your working directory',
         category: 'Administration',
         usage: 'git clean -fd'
     },
     {
         name: 'git gc',
-        description: 'Cleanup unnecessary files and optimize the local repository',
+        description: 'Cleanup and optimize the local repository',
         category: 'Administration',
         usage: 'git gc'
     },
     {
         name: 'git maintenance',
-        description: 'Run tasks to optimize Git repository data',
+        description: 'Run background tasks to keep the repo healthy',
         category: 'Administration',
         usage: 'git maintenance start'
     },
     {
         name: 'git fsck',
-        description: 'Verifies the connectivity and validity of the objects in the database',
+        description: 'Check the database for errors and integrity issues',
         category: 'Administration',
         usage: 'git fsck'
     },
     {
         name: 'git reflog',
-        description: 'Manage reflog information',
+        description: 'View a log of all your local HEAD movements (undo history)',
         category: 'Administration',
         usage: 'git reflog'
     },
     {
         name: 'git filter-branch',
-        description: 'Rewrite branches',
+        description: 'Rewrite history (e.g. remove a file from all commits)',
         category: 'Administration',
         usage: 'git filter-branch'
     },
     {
         name: 'git instaweb',
-        description: 'Instantly browse your working repository in gitweb',
+        description: 'Browse your repo in a web browser instantly',
         category: 'Administration',
         usage: 'git instaweb'
     },
     {
         name: 'git archive',
-        description: 'Create an archive of files from a named tree',
+        description: 'Create a zip/tar archive of the repository',
         category: 'Administration',
         usage: 'git archive --format=zip HEAD'
     },
     {
         name: 'git bundle',
-        description: 'Move objects and refs by archive',
+        description: 'Package objects and refs into a single file for transfer',
         category: 'Administration',
         usage: 'git bundle create <file> <branch>'
     },
 
-    // Plumbing
+    // Plumbing (Internal Tools)
     {
         name: 'git cat-file',
-        description: 'Provide content or type and size information for repository objects',
+        description: 'Show content or details of repository objects',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git cat-file -p <object>'
     },
     {
         name: 'git check-ignore',
-        description: 'Debug gitignore / exclude files',
+        description: 'Check why a file is being ignored',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git check-ignore <file>'
     },
     {
         name: 'git checkout-index',
-        description: 'Copy files from the index to the working tree',
+        description: 'Copy files from the staging area to the working folder',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git checkout-index'
     },
     {
         name: 'git commit-tree',
-        description: 'Create a new commit object',
+        description: 'Create a new commit object manually',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git commit-tree <tree>'
     },
     {
         name: 'git count-objects',
-        description: 'Count unpacked number of objects and their disk consumption',
+        description: 'Count how many objects are in the database',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git count-objects'
     },
     {
         name: 'git diff-index',
-        description: 'Compare a tree to the working tree or index',
+        description: 'Compare a tree to the working directory or staging area',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git diff-index'
     },
     {
         name: 'git for-each-ref',
-        description: 'Output information on each ref',
+        description: 'List and filter references (branches, tags)',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git for-each-ref'
     },
     {
         name: 'git hash-object',
-        description: 'Compute object ID and optionally creates a blob from a file',
+        description: 'Compute the ID of an object and optionally create it',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git hash-object -w <file>'
     },
     {
         name: 'git ls-files',
-        description: 'Show information about files in the index and the working tree',
+        description: 'List all files in the staging area',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git ls-files'
     },
     {
         name: 'git ls-tree',
-        description: 'List the contents of a tree object',
+        description: 'List the contents of a tree object (like a directory)',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git ls-tree <tree>'
     },
     {
         name: 'git merge-base',
-        description: 'Find as good common ancestors as possible for a merge',
+        description: 'Find the common ancestor of two commits',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git merge-base <commit> <commit>'
     },
     {
         name: 'git read-tree',
-        description: 'Reads tree information into the index',
+        description: 'Read tree information into the staging area',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git read-tree <tree>'
     },
     {
         name: 'git rev-list',
-        description: 'Lists commit objects in reverse chronological order',
+        description: 'List commit objects in reverse chronological order',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git rev-list HEAD'
     },
     {
         name: 'git rev-parse',
-        description: 'Pick out and massage parameters',
+        description: 'Parse and validate parameters (e.g. convert HEAD to ID)',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git rev-parse HEAD'
     },
     {
         name: 'git show-ref',
-        description: 'List references in a local repository',
+        description: 'List references in the local repository',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git show-ref'
     },
     {
         name: 'git symbolic-ref',
-        description: 'Read, modify and delete symbolic refs',
+        description: 'Read or modify symbolic refs (like HEAD)',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git symbolic-ref HEAD'
     },
     {
         name: 'git update-index',
-        description: 'Register file contents in the working tree to the index',
+        description: 'Register file contents in the working directory to the staging area',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git update-index'
@@ -521,7 +521,7 @@ export const gitCommands: GitCommand[] = [
     },
     {
         name: 'git write-tree',
-        description: 'Create a tree object from the current index',
+        description: 'Create a tree object from the current staging area',
         category: 'Plumbing',
         isPlumbing: true,
         usage: 'git write-tree'
