@@ -10,19 +10,19 @@ export const gitCommands: GitCommand[] = [
     // Setup and Config
     {
         name: 'git config',
-        description: 'Get and set repository or global options',
+        description: 'Configure Git settings (like your name and email)',
         category: 'Setup and Config',
         usage: 'git config --global user.name "My Name"'
     },
     {
         name: 'git help',
-        description: 'Display help information about Git',
+        description: 'Display help information about Git commands',
         category: 'Setup and Config',
         usage: 'git help <command>'
     },
     {
         name: 'git bugreport',
-        description: 'Collect information for the user to file a bug report',
+        description: 'Collect information to file a bug report',
         category: 'Setup and Config',
         usage: 'git bugreport'
     },
@@ -30,13 +30,13 @@ export const gitCommands: GitCommand[] = [
     // Getting and Creating Projects
     {
         name: 'git init',
-        description: 'Create an empty Git repository or reinitialize an existing one',
+        description: 'Start a new Git repository in the current folder',
         category: 'Getting and Creating Projects',
         usage: 'git init'
     },
     {
         name: 'git clone',
-        description: 'Clone a repository into a new directory',
+        description: 'Download a copy of an existing repository',
         category: 'Getting and Creating Projects',
         usage: 'git clone <url>'
     },
@@ -44,55 +44,55 @@ export const gitCommands: GitCommand[] = [
     // Basic Snapshotting
     {
         name: 'git add',
-        description: 'Add file contents to the index',
+        description: 'Stage files to be included in the next commit',
         category: 'Basic Snapshotting',
         usage: 'git add <file>'
     },
     {
         name: 'git status',
-        description: 'Show the working tree status',
+        description: 'Check which files are changed, staged, or untracked',
         category: 'Basic Snapshotting',
         usage: 'git status'
     },
     {
         name: 'git diff',
-        description: 'Show changes between commits, commit and working tree, etc',
+        description: 'See the exact changes in your files',
         category: 'Basic Snapshotting',
         usage: 'git diff'
     },
     {
         name: 'git commit',
-        description: 'Record changes to the repository',
+        description: 'Save your staged changes to the history',
         category: 'Basic Snapshotting',
         usage: 'git commit -m "message"'
     },
     {
         name: 'git notes',
-        description: 'Add or inspect object notes',
+        description: 'Add extra notes to objects without changing them',
         category: 'Basic Snapshotting',
         usage: 'git notes add'
     },
     {
         name: 'git restore',
-        description: 'Restore working tree files',
+        description: 'Discard changes in working directory',
         category: 'Basic Snapshotting',
         usage: 'git restore <file>'
     },
     {
         name: 'git reset',
-        description: 'Reset current HEAD to the specified state',
+        description: 'Undo commits or unstage files',
         category: 'Basic Snapshotting',
         usage: 'git reset --hard HEAD'
     },
     {
         name: 'git rm',
-        description: 'Remove files from the working tree and from the index',
+        description: 'Remove files from the working tree and the index',
         category: 'Basic Snapshotting',
         usage: 'git rm <file>'
     },
     {
         name: 'git mv',
-        description: 'Move or rename a file, a directory, or a symlink',
+        description: 'Move or rename a file',
         category: 'Basic Snapshotting',
         usage: 'git mv <old> <new>'
     },
@@ -100,55 +100,55 @@ export const gitCommands: GitCommand[] = [
     // Branching and Merging
     {
         name: 'git branch',
-        description: 'List, create, or delete branches',
+        description: 'Create, list, or delete branches',
         category: 'Branching and Merging',
         usage: 'git branch <name>'
     },
     {
         name: 'git checkout',
-        description: 'Switch branches or restore working tree files',
+        description: 'Switch to a different branch',
         category: 'Branching and Merging',
         usage: 'git checkout <branch>'
     },
     {
         name: 'git switch',
-        description: 'Switch branches',
+        description: 'A newer, safer way to switch branches',
         category: 'Branching and Merging',
         usage: 'git switch <branch>'
     },
     {
         name: 'git merge',
-        description: 'Join two or more development histories together',
+        description: 'Combine changes from another branch into this one',
         category: 'Branching and Merging',
         usage: 'git merge <branch>'
     },
     {
         name: 'git mergetool',
-        description: 'Run merge conflict resolution tools to resolve merge conflicts',
+        description: 'Run a tool to resolve merge conflicts',
         category: 'Branching and Merging',
         usage: 'git mergetool'
     },
     {
         name: 'git log',
-        description: 'Show commit logs',
+        description: 'View the commit history',
         category: 'Branching and Merging',
         usage: 'git log'
     },
     {
         name: 'git stash',
-        description: 'Stash the changes in a dirty working directory away',
+        description: 'Temporarily save changes without committing',
         category: 'Branching and Merging',
         usage: 'git stash'
     },
     {
         name: 'git tag',
-        description: 'Create, list, delete or verify a tag object signed with GPG',
+        description: 'Label a specific commit (e.g. v1.0)',
         category: 'Branching and Merging',
         usage: 'git tag -a v1.0 -m "version 1.0"'
     },
     {
         name: 'git worktree',
-        description: 'Manage multiple working trees',
+        description: 'Manage multiple working trees attached to the same repo',
         category: 'Branching and Merging',
         usage: 'git worktree add <path>'
     },
@@ -156,25 +156,25 @@ export const gitCommands: GitCommand[] = [
     // Sharing and Updating Projects
     {
         name: 'git fetch',
-        description: 'Download objects and refs from another repository',
+        description: 'Download updates from remote without merging',
         category: 'Sharing and Updating Projects',
         usage: 'git fetch origin'
     },
     {
         name: 'git pull',
-        description: 'Fetch from and integrate with another repository or a local branch',
+        description: 'Download and merge updates from remote',
         category: 'Sharing and Updating Projects',
         usage: 'git pull origin main'
     },
     {
         name: 'git push',
-        description: 'Update remote refs along with associated objects',
+        description: 'Upload your commits to the remote repository',
         category: 'Sharing and Updating Projects',
         usage: 'git push origin main'
     },
     {
         name: 'git remote',
-        description: 'Manage set of tracked repositories',
+        description: 'Manage connections to remote repositories',
         category: 'Sharing and Updating Projects',
         usage: 'git remote add origin <url>'
     },
