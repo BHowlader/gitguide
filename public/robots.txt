@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gitguide.bibekhowlader.com/sitemap.xml

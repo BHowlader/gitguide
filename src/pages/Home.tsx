@@ -3,6 +3,8 @@ import Hero from '../components/Hero';
 import { ArrowRight, Terminal, GitBranch, Github, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+import PageTitle from '../components/PageTitle';
+
 const Home = () => {
     const features = [
         {
@@ -44,6 +46,7 @@ const Home = () => {
 
     return (
         <div className="animate-fade-in">
+            <PageTitle title="Master Git & GitHub" />
             <Hero />
 
             <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pb-32">
