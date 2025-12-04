@@ -204,6 +204,18 @@ export const gitCommands: GitCommand[] = [
         category: 'Inspection and Comparison',
         usage: 'git describe'
     },
+    {
+        name: 'git whatchanged',
+        description: 'Show logs with difference each commit introduces',
+        category: 'Inspection and Comparison',
+        usage: 'git whatchanged'
+    },
+    {
+        name: 'git verify-commit',
+        description: 'Check the GPG signature of commits',
+        category: 'Inspection and Comparison',
+        usage: 'git verify-commit <commit>'
+    },
 
     // Patching
     {
@@ -290,6 +302,12 @@ export const gitCommands: GitCommand[] = [
         category: 'External Systems',
         usage: 'git fast-import'
     },
+    {
+        name: 'git lfs',
+        description: 'Manage large files with Git LFS',
+        category: 'External Systems',
+        usage: 'git lfs track "*.psd"'
+    },
 
     // Hosting & Deployment
     {
@@ -323,6 +341,12 @@ export const gitCommands: GitCommand[] = [
         description: 'Cleanup unnecessary files and optimize the local repository',
         category: 'Administration',
         usage: 'git gc'
+    },
+    {
+        name: 'git maintenance',
+        description: 'Run tasks to optimize Git repository data',
+        category: 'Administration',
+        usage: 'git maintenance start'
     },
     {
         name: 'git fsck',
