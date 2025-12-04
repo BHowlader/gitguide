@@ -84,7 +84,7 @@ const AllCommands = () => {
                 {/* Results Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredCommands.map((cmd) => (
-                        <div key={cmd.name} className="group perspective-1000 h-64 cursor-pointer">
+                        <div key={cmd.name} className="group perspective-1000 h-56 cursor-pointer">
                             <div className="relative w-full h-full transition-all duration-500 transform-style-3d group-hover:rotate-y-180">
 
                                 {/* Front Face */}
