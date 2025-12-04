@@ -15,8 +15,8 @@ const CheatSheetPage = lazy(() => import('./pages/CheatSheetPage'))
 
 // Loading component
 const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+  <div className="flex items-center justify-center min-h-screen bg-slate-900">
+    <div className="w-[40px] h-[40px] rounded-full border-[3px] border-white/30 border-t-blue-500 animate-spin"></div>
   </div>
 )
 
