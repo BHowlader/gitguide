@@ -19,7 +19,7 @@ const Footer = () => {
                     <div>
                         <h4 className="font-bold text-slate-900 dark:text-white mb-4">Resources</h4>
                         <ul className="space-y-2">
-                            <li><a href="https://git-scm.com/doc" className="hover:text-indigo-400 transition-colors">Official Documentation</a></li>
+                            <li><a href="https://git-scm.com/doc" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors">Official Documentation</a></li>
                         </ul>
                     </div>
                 </div>
